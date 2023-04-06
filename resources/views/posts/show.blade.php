@@ -22,19 +22,36 @@
                 <a href="{{ route('profile.show',$post->user->id) }}" class="text-decoration-none">{{ $post->user->username }}</a>
             </div>
             <div class="col">
-                <a class="btn btn-outline-secondary" 
-                href="
-                    @guest
-                        @if (Route::has('login'))
-                            {{ route('login') }}
-                        @else
-                            #
-                        @endif
-                    @else
-                        #
-                    @endguest
-                "
-                >Follow</a>
+                @guest
+                            <a class="btn btn-outline-secondary" 
+                            href="
+                                @if (Route::has('login'))
+                                    {{ route('login') }}
+                                @else
+                                    #
+                                @endif
+                            "
+                            >Follow</a>
+                        @endguest
+                        @auth                            
+                            @if($post->user->id != Auth::user()->id)
+                                @if(!$post->user->isFollowedBy(Auth::user()->id))
+                                {{-- <p>ssssss</p> --}}
+                                {{-- <form action="{{ route('follow.follow',[$post->user->id,Auth::user()->id]) }}" method="POST">
+                                    @csrf
+                                    <button class="btn btn-info w-100 text-white follow-index">Follow</button>
+                                </form> --}}
+
+                            
+                                    <span class="btn btn-info w-100 text-white follow-index follow-{{ $post->user->id }}" data-followee_id="{{ $post->user->id }}" data-follower_id="{{ Auth::user()->id }}" data-route="{{ route('follow.follow',[$post->user->id,Auth::user()->id]) }}">Follow</span>
+
+                                {{-- @else
+                                    <p>ssssss</p> --}}
+                                @endif
+
+                            {{-- @else --}}
+                            @endif
+                        @endauth
             </div>
 
             {{-- button --}}
