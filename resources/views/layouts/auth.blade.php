@@ -87,7 +87,7 @@
 
         <main class="py-4">
             <div class="row justify-content-center">
-                <div class="col-md-auto">
+                <div class="col-md-8">
                     @yield('content')
                 </div>
             </div>

@@ -12,6 +12,8 @@
             </a>
         </div>
     </div>
+
+    <h2 class="display-6 mt-4">Followers</h2>
     
     @forelse ($follows as $follow)
         {{-- display all the followers --}}

@@ -29,7 +29,7 @@
         <div class="col-3 p-0">
             <a href="{{ route('follow.following',$user->id) }}" class="btn btn-outline-secondary w-100">
                 <p id="followeing" class="display-6">{{ $user->followings->count() }}</p>
-                <span class="fs-6">Followers</span>
+                <span class="fs-6">Following</span>
             </a>
         </div>
     </div>
