@@ -7,14 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## いまのところただInstagramを模倣しただけのWebアプリです。
+# いまのところただInstagramを模倣しただけのWebアプリです。
+## url : https://manami-math.site/manamigram/
 
-# ログイン(Login)してないとき、したとき
+## ログイン(Login)してないとき、したとき
 
 ログインしていないとき、投稿一覧や、それらに対するコメントが見れます。
 ログインすると、投稿、プロフィール、コメント作成、follow、like(高評価)機能が使えます。
 
-# ログインする際
+## ログインする際
 
 新規登録(Resister)は面倒くさいと思われるので、
 Email Address: manami@gmail.com
