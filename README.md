@@ -8,7 +8,7 @@
 </p>
 
 # いまのところただInstagramを模倣しただけのWebアプリです。
-## url : https://manami-math.site/manamigram/
+## url : https://xs445178.xsrv.jp/manamigram/
 
 ## ログイン(Login)してないとき、したとき
 
